@@ -1,0 +1,20 @@
+﻿<Window x:Class="XboxControllerStatus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LunaboticsVisualizer"
+        mc:Ignorable="d"
+        Title="XboxControllerStatus" Height="300" Width="300">
+    <Grid>
+        <ProgressBar x:Name="LProgress" HorizontalAlignment="Left" Height="10" Margin="34,18,0,0" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="RProgress" HorizontalAlignment="Left" Height="10" Margin="166,18,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="LB" Content="LB" HorizontalAlignment="Left" Margin="59,55,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="RB" Content="RB" HorizontalAlignment="Left" Margin="166,55,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <RadioButton x:Name="YButton" Content="Y" HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="AButton" Content="A" HorizontalAlignment="Left" Margin="198,160,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="XButton" Content="X" HorizontalAlignment="Left" Margin="166,128,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="BButton" Content="B" HorizontalAlignment="Left" Margin="226,128,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

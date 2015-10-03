@@ -107,7 +107,7 @@
 
 
                         <TextBlock HorizontalAlignment="Left" Margin="14,10,0,0" TextWrapping="Wrap" Text="Local Interface" VerticalAlignment="Top" Height="19" Width="89" FontSize="13" Foreground="#FF0467AA"/>
-                        <ComboBox x:Name="LocalInterfaces_ComboBox" HorizontalAlignment="Left" Margin="14,34,0,0" VerticalAlignment="Top" FontSize="12" MinWidth="456" />
+                        <ComboBox x:Name="LocalInterfaces_ComboBox" Margin="14,34,0,0" VerticalAlignment="Top" FontSize="12" MinWidth="456" />
                         <CheckBox x:Name="ShowAllInterfaces_ChkBox" Content="Show all Interfaces" HorizontalAlignment="Left" Margin="14,68,0,0" VerticalAlignment="Top" FontSize="13" Height="18" Width="135"/>
                         <TextBlock HorizontalAlignment="Left" Margin="14,93,0,0" TextWrapping="Wrap" Text="Local IP Address" VerticalAlignment="Top" Height="19" Width="89" FontSize="13"/>
                         <TextBlock x:Name="LocalIP_TextBlk" HorizontalAlignment="Left" Margin="151,93,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" FontSize="13"/>
