@@ -7,14 +7,31 @@
         mc:Ignorable="d"
         Title="XboxControllerStatus" Height="300" Width="300">
     <Grid>
-        <ProgressBar x:Name="LProgress" HorizontalAlignment="Left" Height="10" Margin="34,18,0,0" VerticalAlignment="Top" Width="100"/>
-        <ProgressBar x:Name="RProgress" HorizontalAlignment="Left" Height="10" Margin="166,18,0,0" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="LProgress" HorizontalAlignment="Left" Height="10" Margin="41,18,0,0" VerticalAlignment="Top" Width="100"/>
+        <ProgressBar x:Name="RProgress" HorizontalAlignment="Left" Margin="166,0,0,241" Width="100" Height="10" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <ProgressBar.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
         <Button x:Name="LB" Content="LB" HorizontalAlignment="Left" Margin="59,55,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
         <Button x:Name="RB" Content="RB" HorizontalAlignment="Left" Margin="166,55,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <RadioButton x:Name="YButton" Content="Y" HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="AButton" Content="A" HorizontalAlignment="Left" Margin="198,160,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="XButton" Content="X" HorizontalAlignment="Left" Margin="166,128,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="BButton" Content="B" HorizontalAlignment="Left" Margin="226,128,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="YButton" Content="Y" HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top" GroupName="Y"/>
+        <RadioButton x:Name="AButton" Content="A" HorizontalAlignment="Left" Margin="198,160,0,0" VerticalAlignment="Top" GroupName="A"/>
+        <RadioButton x:Name="XButton" Content="X" HorizontalAlignment="Left" Margin="166,128,0,0" VerticalAlignment="Top" GroupName="X"/>
+        <RadioButton x:Name="BButton" Content="B" HorizontalAlignment="Left" Margin="226,128,0,0" VerticalAlignment="Top" GroupName="B"/>
+        <RadioButton x:Name="UpButton" Content="Up" HorizontalAlignment="Left" Margin="76,96,0,0" VerticalAlignment="Top" GroupName="Up"/>
+        <RadioButton x:Name="LeftButton" Content="Left" HorizontalAlignment="Left" Margin="41,128,0,0" VerticalAlignment="Top" GroupName="Left"/>
+        <RadioButton x:Name="DownButton" Content="Down" HorizontalAlignment="Left" Margin="76,160,0,0" VerticalAlignment="Top" GroupName="Down"/>
+        <RadioButton x:Name="RightButton" Content="Right" HorizontalAlignment="Left" Margin="106,128,0,0" VerticalAlignment="Top" GroupName="Right"/>
+        <RadioButton x:Name="StartButton" Content="START" HorizontalAlignment="Left" Margin="174,220,0,0" VerticalAlignment="Top" GroupName="Start"/>
+        <RadioButton x:Name="BackButton" Content="BACK" HorizontalAlignment="Left" Margin="41,220,0,0" VerticalAlignment="Top" GroupName="Back"/>
+        <Label x:Name="LT" Content="LeftTrigger" HorizontalAlignment="Left" Margin="58,24,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="RT" Content="RightTrigger" HorizontalAlignment="Left" Margin="178,24,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

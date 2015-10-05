@@ -19,6 +19,24 @@ Public Class XboxControllerStatus
     Friend Sub SetBCheckBox(ByVal value As Boolean)
         BButton.IsChecked = value
     End Sub
+    Friend Sub SetUpCheckBox(ByVal value As Boolean)
+        UpButton.IsChecked = value
+    End Sub
+    Friend Sub SetDownCheckBox(ByVal value As Boolean)
+        DownButton.IsChecked = value
+    End Sub
+    Friend Sub SetLeftCheckBox(ByVal value As Boolean)
+        LeftButton.IsChecked = value
+    End Sub
+    Friend Sub SetRightCheckBox(ByVal value As Boolean)
+        RightButton.IsChecked = value
+    End Sub
+    Friend Sub SetStartCheckBox(ByVal value As Boolean)
+        StartButton.IsChecked = value
+    End Sub
+    Friend Sub SetBackCheckBox(ByVal value As Boolean)
+        BackButton.IsChecked = value
+    End Sub
     Delegate Sub SetButtonCallback(ByVal value As String)
     Friend Sub SetLBButton(ByVal value As String)
         LB.Content = value
@@ -86,6 +104,43 @@ Public Class XboxControllerStatus
             Else
                 Me.Dispatcher.Invoke(New SetButtonCallback(AddressOf SetRBButton), New Object() {DesiredContentRB})
 
+            End If
+            'D Pad
+            If currentState.DPad.Up = ButtonState.Pressed Then
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetUpCheckBox), New Object() {DesiredValueTrue})
+            Else
+
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetUpCheckBox), New Object() {DesiredValueFalse})
+            End If
+            If currentState.DPad.Down = ButtonState.Pressed Then
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetDownCheckBox), New Object() {DesiredValueTrue})
+            Else
+
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetDownCheckBox), New Object() {DesiredValueFalse})
+            End If
+            If currentState.DPad.Right = ButtonState.Pressed Then
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetRightCheckBox), New Object() {DesiredValueTrue})
+            Else
+
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetRightCheckBox), New Object() {DesiredValueFalse})
+            End If
+            If currentState.DPad.Left = ButtonState.Pressed Then
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetLeftCheckBox), New Object() {DesiredValueTrue})
+            Else
+
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetLeftCheckBox), New Object() {DesiredValueFalse})
+            End If
+            If currentState.Buttons.Start = ButtonState.Pressed Then
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetStartCheckBox), New Object() {DesiredValueTrue})
+            Else
+
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetStartCheckBox), New Object() {DesiredValueFalse})
+            End If
+            If currentState.Buttons.Back = ButtonState.Pressed Then
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetBackCheckBox), New Object() {DesiredValueTrue})
+            Else
+
+                Me.Dispatcher.Invoke(New SetCheckBoxCallback(AddressOf SetBackCheckBox), New Object() {DesiredValueFalse})
             End If
             'Triggers
             Me.Dispatcher.Invoke(New SetProgressBarCallback(AddressOf SetLProgressBar), New Object() {LTriggerReading})
