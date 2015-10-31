@@ -5,12 +5,17 @@
         xmlns:params="http://schemas.codeplex.com/elysium/params" x:Name="window" x:Class="MainWindow"
         WindowStartupLocation="CenterScreen"
         params:Design.Theme="Light" 
-        params:Manager.Theme="Light" FontSize="16" FontFamily="Segoe UI Light" Title="Visualizer - Purdue Lunabotics" Foreground="#FF4D4D4D" Icon="Icons/BlueMoon/BlueMoon48.ico" Loaded="Window_Loaded" Width="1080" Height="650" MinWidth="1080" MinHeight="650"  >
+        params:Manager.Theme="Light" FontSize="16" FontFamily="Segoe UI Light" Title="Visualizer - Purdue Lunabotics" Foreground="#FF4D4D4D" Icon="Icons/BlueMoon/BlueMoon48.ico" Loaded="Window_Loaded" Width="1080" Height="650" MinWidth="1080" MinHeight="650" WindowState="Maximized" SizeToContent="WidthAndHeight" ResizeMode="CanResize" Controls:Window.IsMainWindow="False" AllowDrop="False"  >
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="671*"/>
+            <ColumnDefinition Width="128*"/>
+            <ColumnDefinition Width="273*"/>
+        </Grid.ColumnDefinitions>
 
 
-        <Menu Margin="0" VerticalAlignment="Top" Padding="0,0,6,0" Grid.ColumnSpan="2">
+        <Menu Margin="0" VerticalAlignment="Top" Padding="0,0,6,0" Grid.ColumnSpan="3">
             <MenuItem Header="FILE" Foreground="White" Background="#FF117DD6" Padding="6,2" BorderThickness="0,1,1,0" FontSize="14"/>
             <MenuItem Header="EDIT" FontSize="14" Padding="6,2"/>
             <MenuItem Header="VIEW" FontSize="14" Padding="6,2"/>
@@ -24,7 +29,7 @@
             <MenuItem Header="HELP" FontSize="14" Padding="6,2"/>
         </Menu>
 
-        <TabControl Margin="10,46,10,25" Grid.ColumnSpan="2">
+        <TabControl Margin="10,24,10,25" Grid.ColumnSpan="3">
             <TabItem Header="Overview">
                 <Grid Background="#FFFFFFFF">
 
@@ -40,15 +45,12 @@
                     </Grid.ColumnDefinitions>
 
 
-                    <GroupBox Header="Autonomy &amp; Control" Margin="2.5" MinHeight="100" MinWidth="400" FontSize="14" Foreground="#FF0467AA"  Grid.ColumnSpan="2">
-                        
+                    <GroupBox Header="Autonomy" Margin="2.5" MinHeight="100" MinWidth="300" FontSize="14" Foreground="#FF0467AA"  Grid.ColumnSpan="1">
+
                     </GroupBox>
-                    
-                    <GroupBox Header="ExDep" Margin="2.5" MinHeight="150" MinWidth="300" FontSize="14" Foreground="#FF0467AA" Grid.Column="3"/>
 
-
-                    <GroupBox Header="Drive Train" Margin="2.5" MinHeight="150" MinWidth="300" FontSize="14" Foreground="#FF0467AA" Grid.Row="1"/>
-                    <GroupBox Header="Power" Margin="2.5" MinHeight="150" MinWidth="300" FontSize="14" Foreground="#FF0467AA" Grid.Row="1" Grid.Column="1"/>
+                    <GroupBox Header="Excavation &amp; Deposition" Margin="2.5" MinHeight="150" MinWidth="300" FontSize="14" Foreground="#FF0467AA" Grid.Column="3"/>
+                    <GroupBox Header="Power" Margin="2.5" MinHeight="150" MinWidth="300" FontSize="14" Foreground="#FF0467AA" Grid.Row="1"/>
                     <GroupBox Header="Lunabot Control Panel" Margin="2.5" MinHeight="150" MinWidth="300" FontSize="14" Foreground="#FF0467AA" Grid.Row="1" Grid.Column="2">
                         <Grid >
                             <Button x:Name="Reset_Btn" Content="Reset" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Margin="190,70,0,0"/>
@@ -102,7 +104,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                
+
                     <Grid HorizontalAlignment="Left">
 
 
@@ -132,13 +134,13 @@
                     </Grid>
 
                     <GroupBox Header="Communications Log" Margin="2.5" MinHeight="150" MinWidth="300" FontSize="14" Foreground="#FF0467AA" Grid.Column="2" Grid.ColumnSpan="3"/>
-                    
+
                 </Grid>
             </TabItem>
 
         </TabControl>
 
-        <Controls:ProgressRing HorizontalAlignment="Right" Margin="0,60,15,0" VerticalAlignment="Top" State="Indeterminate" FlowDirection="RightToLeft"      Height="20" Width="20" Grid.Column="1" />
+        <Controls:ProgressRing HorizontalAlignment="Right" Margin="0,39,10,0" VerticalAlignment="Top" State="Indeterminate" FlowDirection="RightToLeft"      Height="20" Width="20" Grid.Column="2" />
         <TextBlock x:Name="StatusText" HorizontalAlignment="Left" Margin="10,0,0,3" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Right" FontSize="14" Text="Offline"/>
 
 
