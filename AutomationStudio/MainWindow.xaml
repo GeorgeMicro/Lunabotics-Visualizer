@@ -9,9 +9,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="671*"/>
-            <ColumnDefinition Width="128*"/>
-            <ColumnDefinition Width="273*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
 
@@ -75,7 +73,26 @@
             </TabItem>
 
             <TabItem Header="Control">
-                <Grid Background="#FFFFFFFF">
+                <Grid Background="#FFFFFFFF" Margin="0,7,0.333,-7">
+                    <TextBlock x:Name="excavRPM" HorizontalAlignment="Left" Margin="74,55,0,0" TextWrapping="Wrap" Text="Excavation Motor RPM" VerticalAlignment="Top" Height="23" Width="200" FontSize="18.667"/>
+                    <TextBlock x:Name="excavActHeight" HorizontalAlignment="Left" Margin="703,55,0,0" TextWrapping="Wrap" Text="Excavation Actuator Height" VerticalAlignment="Top" Height="23" Width="233" FontSize="18.667"/>
+                    <TextBlock x:Name="bucketWeight" HorizontalAlignment="Left" Margin="74,121,0,0" TextWrapping="Wrap" Text="Bucket Weight" VerticalAlignment="Top" Height="23" Width="200" FontSize="18.667"/>
+                    <TextBlock x:Name="depActHeight" HorizontalAlignment="Left" Margin="703,124,0,0" TextWrapping="Wrap" Text="Deposition Actuator Height" VerticalAlignment="Top" Height="23" Width="233" FontSize="18.667"/>
+                    <TextBlock x:Name="leftRPM" HorizontalAlignment="Left" Margin="74,201,0,0" TextWrapping="Wrap" Text="Left Motor RPM" VerticalAlignment="Top" Height="24" Width="140" FontSize="18.667"/>
+                    <TextBlock x:Name="rightRPM" HorizontalAlignment="Left" Margin="772,201,0,0" TextWrapping="Wrap" Text="Right Motor RPM" VerticalAlignment="Top" Height="24" Width="140" FontSize="18.667"/>
+                    <Image x:Name="imgOut" HorizontalAlignment="Left" Height="236" Margin="360,166,0,0" VerticalAlignment="Top" Width="237" Source="Icons/BlueMoon/BlueMoon(Multi-SizeInOne).ico"/>
+                    <TextBlock x:Name="current" HorizontalAlignment="Left" Margin="47,438,0,0" TextWrapping="Wrap" Text="Current:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="excavRPM_Copy1" HorizontalAlignment="Left" Margin="360,438,0,0" TextWrapping="Wrap" Text="Voltage:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="excavRPM_Copy2" HorizontalAlignment="Left" Margin="668,438,0,0" TextWrapping="Wrap" Text="Total Power Consumed:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBox x:Name="outCurrent" HorizontalAlignment="Left" Height="31" Margin="175,431,0,0" TextWrapping="Wrap" Text="20 A" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16" TextDecorations="{x:Null}"/>
+                    <TextBox x:Name="outVoltage" HorizontalAlignment="Left" Height="31" Margin="505,431,0,0" TextWrapping="Wrap" Text="24.6 V" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="outPowerConsumed" HorizontalAlignment="Left" Height="31" Margin="873,431,0,0" TextWrapping="Wrap" Text="492 W" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="outExcRPM" HorizontalAlignment="Left" Height="34" Margin="314,55,0,0" TextWrapping="Wrap" Text="200" VerticalAlignment="Top" Width="131" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="outExcHeight" HorizontalAlignment="Left" Height="34" Margin="500,56,0,0" TextWrapping="Wrap" Text="50cm / 19.69 inch" VerticalAlignment="Top" Width="131" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="outDepHeight" HorizontalAlignment="Left" Height="34" Margin="500,127,0,0" TextWrapping="Wrap" Text="50cm / 19.69 inch" VerticalAlignment="Top" Width="131" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="outBucket" HorizontalAlignment="Left" Height="34" Margin="314,127,0,0" TextWrapping="Wrap" Text="100 kg / 220lbs" VerticalAlignment="Top" Width="131" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="outLeftRPM" HorizontalAlignment="Left" Height="34" Margin="74,260,0,0" TextWrapping="Wrap" Text="200" VerticalAlignment="Top" Width="140" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="outLeftRPM_Copy" HorizontalAlignment="Left" Height="34" Margin="772,260,0,0" TextWrapping="Wrap" Text="200" VerticalAlignment="Top" Width="140" TextAlignment="Center" FontSize="16"/>
 
                 </Grid>
             </TabItem>
@@ -139,8 +156,6 @@
             </TabItem>
 
         </TabControl>
-
-        <Controls:ProgressRing HorizontalAlignment="Right" Margin="0,39,10,0" VerticalAlignment="Top" State="Indeterminate" FlowDirection="RightToLeft"      Height="20" Width="20" Grid.Column="2" />
         <TextBlock x:Name="StatusText" HorizontalAlignment="Left" Margin="10,0,0,3" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Right" FontSize="14" Text="Offline"/>
 
 
