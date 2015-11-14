@@ -27,8 +27,8 @@
             <MenuItem Header="HELP" FontSize="14" Padding="6,2"/>
         </Menu>
 
-        <TabControl Margin="10,24,10,25" Grid.ColumnSpan="3">
-            <TabItem Header="Overview">
+        <TabControl Margin="10,24,10,25" Grid.ColumnSpan="3" RenderTransformOrigin="0.476,0.357">
+            <TabItem Header="Overview" Margin="0,0,0.333,0">
                 <Grid Background="#FFFFFFFF">
 
                     <Grid.RowDefinitions>
@@ -68,12 +68,24 @@
 
             <TabItem Header="Autonomy">
                 <Grid Background="#FFFFFFFF">
-
+                    <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="551" Margin="249,73,0,0" RenderTransformOrigin="0.413,-0.921"/>
+                    <TextBox x:Name="DataLog" HorizontalAlignment="Left" Height="134" TextWrapping="Wrap" Text="Data Log" VerticalAlignment="Top" Width="993" Margin="30,388,0,0" FontSize="26.667" FontWeight="Bold" TextDecorations="Underline"/>
+                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Image #1" VerticalAlignment="Top" Width="103" Margin="255,104,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.346"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
                 </Grid>
-            </TabItem>
 
+            </TabItem>
+            
             <TabItem Header="Control">
-                <Grid Background="#FFFFFFFF" Margin="0,7,0.333,-7">
+                <Grid Background="#FFFFFFFF">
                     <TextBlock x:Name="excavRPM" HorizontalAlignment="Left" Margin="74,55,0,0" TextWrapping="Wrap" Text="Excavation Motor RPM" VerticalAlignment="Top" Height="23" Width="200" FontSize="18.667"/>
                     <TextBlock x:Name="excavActHeight" HorizontalAlignment="Left" Margin="703,55,0,0" TextWrapping="Wrap" Text="Excavation Actuator Height" VerticalAlignment="Top" Height="23" Width="233" FontSize="18.667"/>
                     <TextBlock x:Name="bucketWeight" HorizontalAlignment="Left" Margin="74,121,0,0" TextWrapping="Wrap" Text="Bucket Weight" VerticalAlignment="Top" Height="23" Width="200" FontSize="18.667"/>
@@ -154,9 +166,21 @@
 
                 </Grid>
             </TabItem>
+                
+            <TextBox x:Name="textBox1" Height="187" TextWrapping="Wrap" Text="TextBox" Width="767"/>
+            <Image x:Name="image" Height="160" Width="205"/>
+            <Image x:Name="image1_Copy1" HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="471" RenderTransformOrigin="0.413,-0.921"/>
+            <Label x:Name="label" Content="Label" Height="15" Width="6"/>
+            <Label x:Name="label1" Content="Label" Height="100" Width="100"/>
+            <Label x:Name="label2" Content="Label" Height="100" Width="100"/>
+            <Label x:Name="label3" Content="Label" Height="100" Width="100"/>
+            <Label x:Name="label4" Content="Label" Height="100" Width="100"/>
+            <TextBox x:Name="textBox" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+            <TextBox x:Name="textBox2" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
 
         </TabControl>
         <TextBlock x:Name="StatusText" HorizontalAlignment="Left" Margin="10,0,0,3" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Right" FontSize="14" Text="Offline"/>
+                    
 
 
     </Grid>
