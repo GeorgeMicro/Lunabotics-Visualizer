@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
         xmlns:params="http://schemas.codeplex.com/elysium/params" x:Name="window" x:Class="MainWindow"
+        xmlns:sparrow="http://sparrowtoolkit.codeplex.com/wpf"    
         WindowStartupLocation="CenterScreen"
         params:Design.Theme="Light" 
         params:Manager.Theme="Light" FontSize="16" FontFamily="Segoe UI Light" Title="Visualizer - Purdue Lunabotics" Foreground="#FF4D4D4D" Icon="Icons/BlueMoon/BlueMoon48.ico" Loaded="Window_Loaded" Width="1080" Height="650" MinWidth="1080" MinHeight="650" WindowState="Maximized" SizeToContent="WidthAndHeight" ResizeMode="CanResize" Controls:Window.IsMainWindow="False" AllowDrop="False"  >
@@ -94,8 +95,8 @@
                     <TextBlock x:Name="rightRPM" HorizontalAlignment="Left" Margin="772,201,0,0" TextWrapping="Wrap" Text="Right Motor RPM" VerticalAlignment="Top" Height="24" Width="140" FontSize="18.667"/>
                     <Image x:Name="imgOut" HorizontalAlignment="Left" Height="236" Margin="360,166,0,0" VerticalAlignment="Top" Width="237" Source="Icons/BlueMoon/BlueMoon(Multi-SizeInOne).ico"/>
                     <TextBlock x:Name="current" HorizontalAlignment="Left" Margin="47,438,0,0" TextWrapping="Wrap" Text="Current:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
-                    <TextBlock x:Name="excavRPM_Copy1" HorizontalAlignment="Left" Margin="360,438,0,0" TextWrapping="Wrap" Text="Voltage:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
-                    <TextBlock x:Name="excavRPM_Copy2" HorizontalAlignment="Left" Margin="668,438,0,0" TextWrapping="Wrap" Text="Total Power Consumed:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="voltage" HorizontalAlignment="Left" Margin="360,438,0,0" TextWrapping="Wrap" Text="Voltage:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="power" HorizontalAlignment="Left" Margin="668,438,0,0" TextWrapping="Wrap" Text="Total Power Consumed:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
                     <TextBox x:Name="outCurrent" HorizontalAlignment="Left" Height="31" Margin="175,431,0,0" TextWrapping="Wrap" Text="20 A" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16" TextDecorations="{x:Null}"/>
                     <TextBox x:Name="outVoltage" HorizontalAlignment="Left" Height="31" Margin="505,431,0,0" TextWrapping="Wrap" Text="24.6 V" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
                     <TextBox x:Name="outPowerConsumed" HorizontalAlignment="Left" Height="31" Margin="873,431,0,0" TextWrapping="Wrap" Text="492 W" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
@@ -117,7 +118,28 @@
 
             <TabItem Header="Power">
                 <Grid Background="#FFFFFFFF">
-
+                    <TextBox x:Name="p_outCurrent" HorizontalAlignment="Left" Height="31" Margin="175,431,0,0" TextWrapping="Wrap" Text="20 A" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16" TextDecorations="{x:Null}"/>
+                    <TextBox x:Name="p_outVoltage" HorizontalAlignment="Left" Height="31" Margin="505,431,0,0" TextWrapping="Wrap" Text="24.6 V" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="p_outPowerConsumed" HorizontalAlignment="Left" Height="31" Margin="873,431,0,0" TextWrapping="Wrap" Text="492 W" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
+                    <TextBlock x:Name="p_current" HorizontalAlignment="Left" Margin="47,438,0,0" TextWrapping="Wrap" Text="Current:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="p_voltage" HorizontalAlignment="Left" Margin="360,438,0,0" TextWrapping="Wrap" Text="Voltage:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="p_power" HorizontalAlignment="Left" Margin="668,438,0,0" TextWrapping="Wrap" Text="Total Power Consumed:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <sparrow:SparrowChart Margin="0,0,0,121" Width="1052" Height="401">
+                        <sparrow:SparrowChart.XAxis>
+                            <sparrow:LinearXAxis Header="TIme" UseLayoutRounding="True"/>
+                        </sparrow:SparrowChart.XAxis>
+                        <sparrow:SparrowChart.YAxis>
+                            <sparrow:LinearYAxis Header="Current" UseLayoutRounding="True"/>
+                        </sparrow:SparrowChart.YAxis>
+                        <sparrow:LineSeries>
+                            <sparrow:LineSeries.Points>
+                                <sparrow:DoublePoint Data="0" Value="1"/>
+                                <sparrow:DoublePoint Data="1" Value="2"/>
+                                <sparrow:DoublePoint Data="2" Value="3"/>
+                                <sparrow:DoublePoint Data="3" Value="5"/>
+                            </sparrow:LineSeries.Points>
+                        </sparrow:LineSeries>
+                    </sparrow:SparrowChart>
                 </Grid>
             </TabItem>
 
