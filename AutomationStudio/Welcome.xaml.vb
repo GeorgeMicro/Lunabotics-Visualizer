@@ -1,4 +1,10 @@
 ﻿Imports System.Threading
+Imports Microsoft.Xna
+Imports Microsoft.Xna.Framework
+Imports Microsoft.Xna.Framework.Input
+Imports Microsoft.Xna.Framework.GamerServices
+Imports Microsoft.Xna.Framework.Content
+Imports System.Timers
 
 Public Class Welcome
 
@@ -8,6 +14,8 @@ Public Class Welcome
 
         Dim IDE As MainWindow = New MainWindow
         IDE.Show()
+        IDE.Timer1 = New System.Timers.Timer()
+        IDE.Timer1.Start()
         Me.Close()
 
     End Sub
