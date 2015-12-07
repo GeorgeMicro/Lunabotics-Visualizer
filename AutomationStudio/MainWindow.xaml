@@ -12,21 +12,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-
-        <!-- <Menu Margin="0" VerticalAlignment="Top" Padding="0,0,6,0" Grid.ColumnSpan="3">
-            <MenuItem Header="FILE" Foreground="White" Background="#FF117DD6" Padding="6,2" BorderThickness="0,1,1,0" FontSize="14"/>
-            <MenuItem Header="EDIT" FontSize="14" Padding="6,2"/>
-            <MenuItem Header="VIEW" FontSize="14" Padding="6,2"/>
-            <MenuItem Header="PROJECT" FontSize="14" Padding="6,2"/>
-            <MenuItem Header="TOOLS" FontSize="14" Padding="6,2">
-                <MenuItem Header="Customze..." FontSize="14" Padding="6,2,6,6"/>
-                <MenuItem Header="Monitor Modify" FontSize="14" Padding="6,2,6,6"/>
-                <Separator />
-                <MenuItem Header="Interface Settings" FontSize="14" Padding="6,2,6,6"/>
-            </MenuItem>
-            <MenuItem Header="HELP" FontSize="14" Padding="6,2"/>
-        </Menu> -->
-
         <TabControl Margin="10,10,10,25">
             <TabItem Header="Overview" Margin="0,0,0.333,0">
                 <Grid Background="#FFFFFFFF">
@@ -377,12 +362,6 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="ExDep">
-                <Grid Background="#FFFFFFFF">
-
-                </Grid>
-            </TabItem>
-
             <TabItem Header="Communications">
                 <Grid Background="#FFFFFFFF">
                     <Grid.ColumnDefinitions>
@@ -423,16 +402,6 @@
                 </Grid>
             </TabItem>
 
-            <TextBox x:Name="textBox1" Height="187" TextWrapping="Wrap" Text="TextBox" Width="767"/>
-            <Image x:Name="image" Height="160" Width="205"/>
-            <Image x:Name="image1_Copy1" HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="471" RenderTransformOrigin="0.413,-0.921"/>
-            <Label x:Name="label" Content="Label" Height="15" Width="6"/>
-            <Label x:Name="label1" Content="Label" Height="100" Width="100"/>
-            <Label x:Name="label2" Content="Label" Height="100" Width="100"/>
-            <Label x:Name="label3" Content="Label" Height="100" Width="100"/>
-            <Label x:Name="label4" Content="Label" Height="100" Width="100"/>
-            <TextBox x:Name="textBox" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
-            <TextBox x:Name="textBox2" Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
 
         </TabControl>
         <TextBlock x:Name="StatusText" HorizontalAlignment="Left" Margin="10,0,0,3" TextWrapping="Wrap" VerticalAlignment="Bottom" TextAlignment="Right" FontSize="14" Text="Offline"/>
