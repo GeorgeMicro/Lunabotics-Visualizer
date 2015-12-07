@@ -80,19 +80,116 @@
             </TabItem>
 
             <TabItem Header="Autonomy">
-                <Grid Background="#FFFFFFFF">
-                    <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="551" Margin="249,73,0,0" RenderTransformOrigin="0.413,-0.921"/>
+                <Grid Background="#FFFFFFFF" RenderTransformOrigin="0.425,0.477">
+                    <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="243" Margin="36,93,0,0" RenderTransformOrigin="0.413,-0.921">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="-0.115"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="-0.457"/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
                     <TextBox x:Name="DataLog" HorizontalAlignment="Left" Height="134" TextWrapping="Wrap" Text="Data Log" VerticalAlignment="Top" Width="993" Margin="30,388,0,0" FontSize="26.667" FontWeight="Bold" TextDecorations="Underline"/>
-                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" Text="Live Camera Feed" VerticalAlignment="Top" Width="215" Margin="255,104,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="65" TextWrapping="Wrap" Text="Live Camera Feed" VerticalAlignment="Top" Width="161" Margin="82,15,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.47,0.518">
                         <TextBox.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
                                 <SkewTransform/>
                                 <RotateTransform Angle="-0.346"/>
-                                <TranslateTransform/>
+                                <TranslateTransform X="0.007" Y="0.029"/>
                             </TransformGroup>
                         </TextBox.RenderTransform>
                     </TextBox>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="214" Stroke="Black" VerticalAlignment="Top" Width="109" Margin="450,110,0,0"/>
+                    <TextBox x:Name="textBox3_Copy" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Rover Position&#xD;&#xA;" VerticalAlignment="Top" Width="161" Margin="429,10,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.699,0.894">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.346"/>
+                                <TranslateTransform X="0.179" Y="-0.195"/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <TextBox x:Name="textBox3_Copy1" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="7.38 m&#xA;" VerticalAlignment="Top" Width="64" Margin="521,185,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.699,0.894">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="89.301"/>
+                                <TranslateTransform X="0.179" Y="-0.195"/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <TextBox x:Name="textBox3_Copy2" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="3.78 m&#xA;" VerticalAlignment="Top" Width="64" Margin="473,325,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.699,0.894">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.062"/>
+                                <TranslateTransform X="0.179" Y="-0.195"/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <Separator HorizontalAlignment="Left" Height="8" Margin="590,159,0,0" VerticalAlignment="Top" Width="2"/>
+                    <Separator HorizontalAlignment="Left" Height="43" Margin="430,110,0,0" VerticalAlignment="Top" Width="1"/>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="43" Stroke="Black" VerticalAlignment="Top" Width="1" Margin="430,110,0,0"/>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="15" Stroke="Black" VerticalAlignment="Top" Width="1" Margin="431,144,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-88.298"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="85" Stroke="Black" VerticalAlignment="Top" Width="1" Margin="430,153,0,0"/>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="15" Stroke="Black" VerticalAlignment="Top" Width="1" Margin="431,231,0,0" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-88.298"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                    </Rectangle>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="85" Stroke="Black" VerticalAlignment="Top" Width="1" Margin="430,239,0,0"/>
+                    <TextBox x:Name="textBox3_Copy3" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Start Zone&#xA;" VerticalAlignment="Top" Width="94" Margin="325,108,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.699,0.894">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.062"/>
+                                <TranslateTransform X="0.179" Y="-0.195"/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <TextBox x:Name="textBox3_Copy4" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Obstacle Area&#xA;" VerticalAlignment="Top" Width="127" Margin="295,175,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.699,0.894">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.062"/>
+                                <TranslateTransform X="0.179" Y="-0.195"/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <TextBox x:Name="textBox3_Copy5" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="Mining Area&#xA;" VerticalAlignment="Top" Width="127" Margin="294,258,0,0" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.699,0.894">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.062"/>
+                                <TranslateTransform X="0.179" Y="-0.195"/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                    <Ellipse Fill="#FF96E146" HorizontalAlignment="Left" Height="21" Stroke="Black" VerticalAlignment="Top" Width="24" Margin="468,132,0,0"/>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="13" Stroke="Black" VerticalAlignment="Top" Width="45" Margin="482,97,0,0"/>
                 </Grid>
 
             </TabItem>
