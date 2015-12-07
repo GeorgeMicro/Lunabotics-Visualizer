@@ -221,18 +221,50 @@
 
             <TabItem Header="Power">
                 <Grid Background="#FFFFFFFF">
-                    <TextBox x:Name="p_outCurrent" HorizontalAlignment="Left" Height="31" Margin="175,431,0,0" TextWrapping="Wrap" Text="20 A" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16" TextDecorations="{x:Null}"/>
-                    <TextBox x:Name="p_outVoltage" HorizontalAlignment="Left" Height="31" Margin="505,431,0,0" TextWrapping="Wrap" Text="24.6 V" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
-                    <TextBox x:Name="p_outPowerConsumed" HorizontalAlignment="Left" Height="31" Margin="873,431,0,0" TextWrapping="Wrap" Text="492 W" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
-                    <TextBlock x:Name="p_current" HorizontalAlignment="Left" Margin="47,438,0,0" TextWrapping="Wrap" Text="Current:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
-                    <TextBlock x:Name="p_voltage" HorizontalAlignment="Left" Margin="360,438,0,0" TextWrapping="Wrap" Text="Voltage:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
-                    <TextBlock x:Name="p_power" HorizontalAlignment="Left" Margin="668,438,0,0" TextWrapping="Wrap" Text="Total Power Consumed:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
-                    <sparrow:SparrowChart Margin="0,0,0,121" Width="1052" Height="401">
+                    <TextBox x:Name="p_outCurrent" HorizontalAlignment="Left" Height="31" Margin="215,47,0,0" TextWrapping="Wrap" Text="20 A" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16" TextDecorations="{x:Null}"/>
+                    <TextBox x:Name="p_outVoltage" HorizontalAlignment="Left" Height="31" Margin="545,47,0,0" TextWrapping="Wrap" Text="24.6 V" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="p_outPowerConsumed" HorizontalAlignment="Left" Height="31" Margin="913,47,0,0" TextWrapping="Wrap" Text="492 W" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontSize="16"/>
+                    <TextBlock x:Name="p_current" HorizontalAlignment="Left" Margin="87,54,0,0" TextWrapping="Wrap" Text="Current:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="p_voltage" HorizontalAlignment="Left" Margin="400,54,0,0" TextWrapping="Wrap" Text="Voltage:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <TextBlock x:Name="p_power" HorizontalAlignment="Left" Margin="708,54,0,0" TextWrapping="Wrap" Text="Total Power Consumed:" VerticalAlignment="Top" Height="24" Width="185" FontSize="18.667"/>
+                    <sparrow:SparrowChart x:Name="CurrentGraph" Margin="19,98,712.333,43">
                         <sparrow:SparrowChart.XAxis>
-                            <sparrow:LinearXAxis Header="TIme" UseLayoutRounding="True"/>
+                            <sparrow:LinearXAxis Header="Time" UseLayoutRounding="True"/>
                         </sparrow:SparrowChart.XAxis>
                         <sparrow:SparrowChart.YAxis>
                             <sparrow:LinearYAxis Header="Current" UseLayoutRounding="True"/>
+                        </sparrow:SparrowChart.YAxis>
+                        <sparrow:LineSeries>
+                            <sparrow:LineSeries.Points>
+                                <sparrow:DoublePoint Data="0" Value="1"/>
+                                <sparrow:DoublePoint Data="1" Value="2"/>
+                                <sparrow:DoublePoint Data="2" Value="3"/>
+                                <sparrow:DoublePoint Data="3" Value="5"/>
+                            </sparrow:LineSeries.Points>
+                        </sparrow:LineSeries>
+                    </sparrow:SparrowChart>
+                    <sparrow:SparrowChart x:Name="VoltageGraph" Margin="354,98,354.333,43">
+                        <sparrow:SparrowChart.XAxis>
+                            <sparrow:LinearXAxis Header="Time" UseLayoutRounding="True"/>
+                        </sparrow:SparrowChart.XAxis>
+                        <sparrow:SparrowChart.YAxis>
+                            <sparrow:LinearYAxis Header="Voltage" UseLayoutRounding="True"/>
+                        </sparrow:SparrowChart.YAxis>
+                        <sparrow:LineSeries>
+                            <sparrow:LineSeries.Points>
+                                <sparrow:DoublePoint Data="0" Value="1"/>
+                                <sparrow:DoublePoint Data="1" Value="2"/>
+                                <sparrow:DoublePoint Data="2" Value="3"/>
+                                <sparrow:DoublePoint Data="3" Value="5"/>
+                            </sparrow:LineSeries.Points>
+                        </sparrow:LineSeries>
+                    </sparrow:SparrowChart>
+                    <sparrow:SparrowChart x:Name="PowerGraph" Margin="708,98,4.333,43">
+                        <sparrow:SparrowChart.XAxis>
+                            <sparrow:LinearXAxis Header="Time" UseLayoutRounding="True"/>
+                        </sparrow:SparrowChart.XAxis>
+                        <sparrow:SparrowChart.YAxis>
+                            <sparrow:LinearYAxis Header="Power Consumed" UseLayoutRounding="True"/>
                         </sparrow:SparrowChart.YAxis>
                         <sparrow:LineSeries>
                             <sparrow:LineSeries.Points>
